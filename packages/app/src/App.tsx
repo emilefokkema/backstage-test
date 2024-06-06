@@ -26,6 +26,7 @@ import { apis } from './apis';
 import { entityPage } from './components/catalog/EntityPage';
 import { searchPage } from './components/search/SearchPage';
 import { Root } from './components/Root';
+import { ReproductionComponent } from './components/reproduction-25090/reproduction-component'
 
 import {
   AlertDisplay,
@@ -64,8 +65,9 @@ const app = createApp({
 
 const routes = (
   <FlatRoutes>
-    <Route path="/" element={<Navigate to="catalog" />} />
+    <Route path="/" element={<Navigate to="reproduction" />} />
     <Route path="/catalog" element={<CatalogIndexPage />} />
+    <Route path="/reproduction" element={<ReproductionComponent />}></Route>
     <Route
       path="/catalog/:namespace/:kind/:name"
       element={<CatalogEntityPage />}
